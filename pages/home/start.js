@@ -42,8 +42,8 @@ export default function Component() {
     }
   }, [router])
 
-  const ref_header_color = useRef(null); refs['ref_header_color'] = ref_header_color;
   const ref_pip = useRef(null); refs['ref_pip'] = ref_pip;
+  const ref_header_color = useRef(null); refs['ref_header_color'] = ref_header_color;
   const ref_prereq = useRef(null); refs['ref_prereq'] = ref_prereq;
   const ref_git = useRef(null); refs['ref_git'] = ref_git;
 
@@ -62,10 +62,10 @@ export default function Component() {
 </Heading>
 </Link>
   <HStack spacing={`2rem`} sx={{"alignItems": "end", "transition": "opacity 500ms ease 500ms"}}>
-  {main_state.header_state.withNav.map((cjeanhhv, i) => (
-  <Link as={NextLink} href={cjeanhhv.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
+  {main_state.header_state.withNav.map((uyywrlzr, i) => (
+  <Link as={NextLink} href={uyywrlzr.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
   <Heading size={`s`} sx={{"paddingTop": "0.3rem", "color": "white", "fontWeight": "semibold"}}>
-  {cjeanhhv.at(0)}
+  {uyywrlzr.at(0)}
 </Heading>
 </Link>
 ))}
@@ -283,16 +283,16 @@ To use **Reflexify**, you need to have have the latest version of **Reflex** and
   <Spacer/>
   <HStack spacing={`2rem`}>
   <Link as={NextLink} href={`https://github.com/LineIndent/reflexify`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://twitter.com/getreflex`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://www.youtube.com/playlist?list=PLDHA4931gtc7wHBDGQOYlmcpZm7qyici7`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://discord.com/invite/T5WSbC2YtQ`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer"}}/>
 </Link>
 </HStack>
 </HStack>
@@ -310,16 +310,16 @@ To use **Reflexify**, you need to have have the latest version of **Reflex** and
   <Spacer/>
   <HStack spacing={`2rem`}>
   <Link as={NextLink} href={`https://github.com/LineIndent/reflexify`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://twitter.com/getreflex`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://www.youtube.com/playlist?list=PLDHA4931gtc7wHBDGQOYlmcpZm7qyici7`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://discord.com/invite/T5WSbC2YtQ`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer"}}/>
 </Link>
 </HStack>
 </HStack>
@@ -337,16 +337,16 @@ To use **Reflexify**, you need to have have the latest version of **Reflex** and
 </VStack>
   <HStack spacing={`2rem`}>
   <Link as={NextLink} href={`https://github.com/LineIndent/reflexify`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://twitter.com/getreflex`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://www.youtube.com/playlist?list=PLDHA4931gtc7wHBDGQOYlmcpZm7qyici7`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://discord.com/invite/T5WSbC2YtQ`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer"}}/>
 </Link>
 </HStack>
 </VStack>
@@ -366,10 +366,10 @@ To use **Reflexify**, you need to have have the latest version of **Reflex** and
 </Heading>
 </Link>
   <HStack spacing={`2rem`} sx={{"alignItems": "end", "transition": "opacity 500ms ease 500ms"}}>
-  {main_state.header_state.withNav.map((ytxrzlsp, i) => (
-  <Link as={NextLink} href={ytxrzlsp.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
+  {main_state.header_state.withNav.map((nxmajgex, i) => (
+  <Link as={NextLink} href={nxmajgex.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
   <Heading size={`s`} sx={{"paddingTop": "0.3rem", "color": "white", "fontWeight": "semibold"}}>
-  {ytxrzlsp.at(0)}
+  {nxmajgex.at(0)}
 </Heading>
 </Link>
 ))}
@@ -608,16 +608,16 @@ To use **Reflexify**, you need to have have the latest version of **Reflex** and
   <Spacer/>
   <HStack spacing={`2rem`}>
   <Link as={NextLink} href={`https://github.com/LineIndent/reflexify`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://twitter.com/getreflex`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://www.youtube.com/playlist?list=PLDHA4931gtc7wHBDGQOYlmcpZm7qyici7`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://discord.com/invite/T5WSbC2YtQ`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer"}}/>
 </Link>
 </HStack>
 </HStack>
@@ -635,16 +635,16 @@ To use **Reflexify**, you need to have have the latest version of **Reflex** and
   <Spacer/>
   <HStack spacing={`2rem`}>
   <Link as={NextLink} href={`https://github.com/LineIndent/reflexify`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://twitter.com/getreflex`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://www.youtube.com/playlist?list=PLDHA4931gtc7wHBDGQOYlmcpZm7qyici7`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://discord.com/invite/T5WSbC2YtQ`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer"}}/>
 </Link>
 </HStack>
 </HStack>
@@ -662,16 +662,16 @@ To use **Reflexify**, you need to have have the latest version of **Reflex** and
 </VStack>
   <HStack spacing={`2rem`}>
   <Link as={NextLink} href={`https://github.com/LineIndent/reflexify`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/github.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://twitter.com/getreflex`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/twitter.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://www.youtube.com/playlist?list=PLDHA4931gtc7wHBDGQOYlmcpZm7qyici7`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/youtube.png`} sx={{"cursor": "pointer"}}/>
 </Link>
   <Link as={NextLink} href={`https://discord.com/invite/T5WSbC2YtQ`} sx={{"_hover": {"textDecoration": "None"}}}>
-  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer", "_dark": {"filter": "brightness(0) invert(1)"}}}/>
+  <Image htmlHeight={`20px`} htmlWidth={`20px`} src={`/discord.png`} sx={{"cursor": "pointer"}}/>
 </Link>
 </HStack>
 </VStack>
