@@ -55,6 +55,7 @@ class RxFooter:
                                 html_width="20px",
                                 html_height="20px",
                                 cursor="pointer",
+                                filter="brightness(0) invert(1)",
                             ),
                             href=url,
                             _hover={"text_decoration": "None"},
