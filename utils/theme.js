@@ -1,1 +1,1 @@
-export default {"styles": {"global": {"body": {"fontFamily": "Helvetica"}}}}
+export default {"styles": {"global": {"body": {"fontFamily": "Helvetica", "_dark": {"bg": "#1F2128"}}}}}

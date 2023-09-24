@@ -5,8 +5,9 @@ import { EventLoopContext, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
 import "katex/dist/katex.min.css"
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Breadcrumb, BreadcrumbItem, Button, Code, Container, Heading, HStack, Image, Link, ListItem, OrderedList, Spacer, Text, Tooltip, UnorderedList, useColorMode, VStack } from "@chakra-ui/react"
+import { CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons"
+import Script from "next/script"
 import NextLink from "next/link"
-import { MoonIcon, SunIcon } from "@chakra-ui/icons"
 import ReactMarkdown from "react-markdown"
 import remarkMath from "remark-math"
 import remarkGfm from "remark-gfm"
@@ -14,7 +15,6 @@ import rehypeKatex from "rehype-katex"
 import rehypeRaw from "rehype-raw"
 import { Prism } from "react-syntax-highlighter"
 import { dark, light } from "/styles/code/prism"
-import Script from "next/script"
 import NextHead from "next/head"
 
 
@@ -43,12 +43,35 @@ export default function Component() {
     }
   }, [router])
 
+  const ref_close = useRef(null); refs['ref_close'] = ref_close;
   const ref_header_color = useRef(null); refs['ref_header_color'] = ref_header_color;
+  const ref_RxAnnouncement = useRef(null); refs['ref_RxAnnouncement'] = ref_RxAnnouncement;
 
   return (
   <Fragment><Fragment>
   <VStack sx={{"width": "100%", "minHeight": "100vh", "spacing": "0rem", "padding": "0", "margin": "0"}}>
   <Box sx={{"width": "100%", "display": ["none", "none", "none", "block"]}}>
+  <HStack id={`RxAnnouncement`} ref={ref_RxAnnouncement} sx={{"width": "100%", "height": "45px", "bg": "#18181d", "padding": ["0rem 1rem", "0rem 1rem", "0rem 0.5rem", "0rem 4rem", "0rem 10rem"], "transition": "all 550ms ease"}}>
+  <Box dangerouslySetInnerHTML={{"__html": " <div style='color: #b8b8ba;'>For updates follow <span><strong style='color: #fff;'>@lineindent</strong></span> on <span style='vertical-align: middle;'> <a href='https://www.youtube.com/@lineindent'><img src='/youtube.png' style='width: 28px; height: 28px; display: inline-block; vertical-align: middle; filter: brightness(0) invert(1);'/></a></span> <a href='https://www.youtube.com/@lineindent'> <span style='color: #fff;'><strong> YouTube</strong></span></a></div>"}}/>
+  <Spacer/>
+  <Button colorScheme={`None`} id={`close`} onClick={...args => {hide(args)}} ref={ref_close}>
+  <CloseIcon sx={{"color": "white"}}/>
+  <Script strategy={`afterInteractive`}>
+  {`
+        function hide() {
+            var RxAnnouncement = document.getElementById("RxAnnouncement");
+            RxAnnouncement.style.display = "none";
+        }
+
+        // Get a reference to the button element
+        var close = document.getElementById("close");
+
+        // Add a click event listener to the button
+        close.addEventListener("click", hide);
+                    `}
+</Script>
+</Button>
+</HStack>
   <HStack id={`header_color`} ref={ref_header_color} sx={{"width": "100%", "height": "50px", "position": "sticky", "boxShadow": "0 3px 6px 0 rgba(0, 0, 0, 0.5)", "transition": "height 350ms ease", "top": "0", "zIndex": "2", "backgroundColor": "black"}}>
   <Box sx={{"width": "100%", "paddingLeft": ["", "", "", "4rem", "10rem"], "paddingRight": ["", "", "", "4rem", "10rem"], "transition": "all 550ms ease", "display": ["none", "none", "none", "block"]}}>
   <HStack>
@@ -60,10 +83,10 @@ export default function Component() {
 </Heading>
 </Link>
   <HStack spacing={`2rem`} sx={{"alignItems": "end", "transition": "opacity 500ms ease 500ms"}}>
-  {main_state.header_state.withNav.map((scwegtnt, i) => (
-  <Link as={NextLink} href={scwegtnt.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
+  {main_state.header_state.withNav.map((eskkvxzt, i) => (
+  <Link as={NextLink} href={eskkvxzt.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
   <Heading size={`s`} sx={{"paddingTop": "0.3rem", "color": "white", "fontWeight": "semibold"}}>
-  {scwegtnt.at(0)}
+  {eskkvxzt.at(0)}
 </Heading>
 </Link>
 ))}
@@ -104,7 +127,7 @@ export default function Component() {
   <HStack spacing={`0.35rem`}>
   <Box dangerouslySetInnerHTML={{"__html": "<img width='10' height='10' src='https://img.icons8.com/ios-filled/50/star--v1.png' style='filter: brightness(0) invert(1);'/>"}}/>
   <Text sx={{"color": "white", "fontSize": 11}}>
-  {`25`}
+  {`26`}
 </Text>
 </HStack>
   <HStack spacing={`0.35rem`}>
@@ -383,6 +406,27 @@ The secondary color is used for events such as link and selected words highlight
 </HStack>
 </Box>
   <Box sx={{"width": "100%", "display": ["block", "block", "block", "none"]}}>
+  <HStack id={`RxAnnouncement`} ref={ref_RxAnnouncement} sx={{"width": "100%", "height": "45px", "bg": "#18181d", "padding": ["0rem 1rem", "0rem 1rem", "0rem 0.5rem", "0rem 4rem", "0rem 10rem"], "transition": "all 550ms ease"}}>
+  <Box dangerouslySetInnerHTML={{"__html": " <div style='color: #b8b8ba;'>For updates follow <span><strong style='color: #fff;'>@lineindent</strong></span> on <span style='vertical-align: middle;'> <a href='https://www.youtube.com/@lineindent'><img src='/youtube.png' style='width: 28px; height: 28px; display: inline-block; vertical-align: middle; filter: brightness(0) invert(1);'/></a></span> <a href='https://www.youtube.com/@lineindent'> <span style='color: #fff;'><strong> YouTube</strong></span></a></div>"}}/>
+  <Spacer/>
+  <Button colorScheme={`None`} id={`close`} onClick={...args => {hide(args)}} ref={ref_close}>
+  <CloseIcon sx={{"color": "white"}}/>
+  <Script strategy={`afterInteractive`}>
+  {`
+        function hide() {
+            var RxAnnouncement = document.getElementById("RxAnnouncement");
+            RxAnnouncement.style.display = "none";
+        }
+
+        // Get a reference to the button element
+        var close = document.getElementById("close");
+
+        // Add a click event listener to the button
+        close.addEventListener("click", hide);
+                    `}
+</Script>
+</Button>
+</HStack>
   <HStack id={`header_color`} ref={ref_header_color} sx={{"width": "100%", "height": "50px", "position": "sticky", "boxShadow": "0 3px 6px 0 rgba(0, 0, 0, 0.5)", "transition": "height 350ms ease", "top": "0", "zIndex": "2", "backgroundColor": "black"}}>
   <Box sx={{"width": "100%", "paddingLeft": ["", "", "", "4rem", "10rem"], "paddingRight": ["", "", "", "4rem", "10rem"], "transition": "all 550ms ease", "display": ["none", "none", "none", "block"]}}>
   <HStack>
@@ -394,10 +438,10 @@ The secondary color is used for events such as link and selected words highlight
 </Heading>
 </Link>
   <HStack spacing={`2rem`} sx={{"alignItems": "end", "transition": "opacity 500ms ease 500ms"}}>
-  {main_state.header_state.withNav.map((fncruicu, i) => (
-  <Link as={NextLink} href={fncruicu.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
+  {main_state.header_state.withNav.map((cicuxkcl, i) => (
+  <Link as={NextLink} href={cicuxkcl.at(1)} key={i} sx={{"opacity": "0.85", "transition": "opacity 600ms ease", "_hover": {"textDecoration": "None", "opacity": "1"}}}>
   <Heading size={`s`} sx={{"paddingTop": "0.3rem", "color": "white", "fontWeight": "semibold"}}>
-  {fncruicu.at(0)}
+  {cicuxkcl.at(0)}
 </Heading>
 </Link>
 ))}
@@ -438,7 +482,7 @@ The secondary color is used for events such as link and selected words highlight
   <HStack spacing={`0.35rem`}>
   <Box dangerouslySetInnerHTML={{"__html": "<img width='10' height='10' src='https://img.icons8.com/ios-filled/50/star--v1.png' style='filter: brightness(0) invert(1);'/>"}}/>
   <Text sx={{"color": "white", "fontSize": 11}}>
-  {`25`}
+  {`26`}
 </Text>
 </HStack>
   <HStack spacing={`0.35rem`}>
